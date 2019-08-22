@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  become_user: root
+  gather_facts: false
+  tasks:
+    - name: poll a sleep
+      shell: ls /root
+    - debug:
+        msg: :I m debug a message"
